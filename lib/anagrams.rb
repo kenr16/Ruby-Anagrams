@@ -1,9 +1,13 @@
 require 'rest-client'
+require 'dictionary_lookup'
 resource = RestClient::Resource.new 'http://www.mieliestronk.com/corncob_lowercase.txt'
 
 word = "random"
-# if resource.include?(word)
-# end
+results = DictionaryLookup::Base.define(word)
+if results.count >= 1
+  puts("Success!  The word appears in the dictionary of English words!")
+end
+
 
 
 class Array
