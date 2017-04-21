@@ -1,3 +1,11 @@
+require 'rest-client'
+resource = RestClient::Resource.new 'http://www.mieliestronk.com/corncob_lowercase.txt'
+
+word = "random"
+# if resource.include?(word)
+# end
+
+
 class Array
   define_method(:verify_word) do
     vowels = ["a", "e", "i", "o", "u"]
