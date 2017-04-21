@@ -29,11 +29,11 @@ describe("String#anagrams") do
   end
 
   it("Checks to see if the inputted words are actual words which contain a vowel.") do
-  expect("Rby".anagrams("Bury")).to(eq("All inputted must contain a vowel."))
+  expect("Rby".anagrams("Bury")).to(eq("All inputted words must contain a vowel."))
   end
 
   it("Checks to see if the inputted words are actual words which contain a vowel.") do
-  expect("Ruby".anagrams("Bry")).to(eq("All inputted must contain a vowel."))
+  expect("Ruby".anagrams("Bry")).to(eq("All inputted words must contain a vowel."))
   end
 
   it("If the words are not anagrams, checks to see if the words are antigrams.") do
@@ -45,7 +45,7 @@ describe("String#anagrams") do
   end
 
   it("Remove spaces before running the anagram check, also ensure that each individual word in the input contains a vowel.") do
-  expect("Ruby".anagrams("Seeing h")).to(eq("All inputted must contain a vowel."))
+  expect("Ruby".anagrams("Seeing h")).to(eq("All inputted words must contain a vowel."))
   end
 
   it("If two words are not anagrams, determine how many letters they have in common.") do
@@ -55,9 +55,25 @@ end
 
 describe(Anagram) do
   describe('#is_anagram?') do
-    it("Returns false if the inputted pair of words is not an anagram.") do
+    it("Returns true if the inputted pair of words is an anagram.") do
       test_pair = Anagram.new("Hello", "Olleh")
       expect(test_pair.is_anagram?()).to(eq(true))
     end
   end
+
+  describe('#is_palindrome?') do
+    it("Returns true if the inputted pair of words is a palindrome.") do
+      test_pair = Anagram.new("Hello", "Olleh")
+      expect(test_pair.is_palindrome?()).to(eq(true))
+    end
+  end
+
+  describe('#is_antigram?') do
+    it("Returns true if the inputted pair of words is an antigram.") do
+      test_pair = Anagram.new("Hotel", "India")
+      expect(test_pair.is_antigram?()).to(eq(true))
+    end
+  end
+
+
 end

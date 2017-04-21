@@ -100,9 +100,26 @@ class Anagram
     @word1 = word1
     @word2 = word2
   end
+
   define_method(:is_anagram?) do
     first_letter_array = @word1.downcase().split("")
     second_letter_array = @word2.downcase().split("")
     first_letter_array.sort() == second_letter_array.sort()
+  end
+
+  define_method(:is_palindrome?) do
+    @word1.downcase().reverse() == @word2.downcase()
+  end
+
+  define_method(:is_antigram?) do
+    first_letter_array = @word1.downcase().split("")
+    second_letter_array = @word2.downcase().split("")
+    output = true
+    first_letter_array.each do |letter|
+      if second_letter_array.include?(letter) == true
+        output = false
+      end
+    end
+    output
   end
 end

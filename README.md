@@ -6,7 +6,7 @@
 
 ## Overview
 
-This website will allow a user to enter a string and check to se if that string is an anagram.
+This website will allow a user to enter two strings and check to see if those strings are anagrams of one another.  If the two strings are anagrams, it will check to see if they are palindromes as well.  If the two strings are not anagrams, it will check to see if they are palindromes.  If you are unable to run the ruby app in a localhost, the link to the Heroku page for this project is available at: https://pure-thicket-40941.herokuapp.com/ 
 
 ## Specifications
 
