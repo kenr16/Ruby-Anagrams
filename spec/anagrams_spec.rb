@@ -25,7 +25,7 @@ describe("String#anagrams") do
   end
 
   it("Checks to see if the words are palindromes as well as anagrams regardless of case.") do
-  expect("Ruby".anagrams("Hello")).to(eq("These words are not anagrams."))
+  expect("Ruby".anagrams("Hellu")).to(eq("These words are not anagrams."))
   end
 
   it("Checks to see if the inputted words are actual words which contain a vowel.") do
@@ -35,5 +35,17 @@ describe("String#anagrams") do
   it("Checks to see if the inputted words are actual words which contain a vowel.") do
   expect("Ruby".anagrams("Bry")).to(eq("The second word must contain a vowel."))
   end
+
+  it("If the words are not anagrams, checks to see if the words are antigrams.") do
+  expect("Ruby".anagrams("Suing")).to(eq("These words are not anagrams."))
+  end
+
+  it("If the words are not anagrams, checks to see if the words are antigrams.") do
+  expect("Ruby".anagrams("Seeing")).to(eq("These words are antigrams."))
+  end
+
+
+
+
 
 end
