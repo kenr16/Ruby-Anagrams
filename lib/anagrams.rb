@@ -31,6 +31,32 @@ class String
   end
 end
 
+class String
+  define_method(:palindromes) do |word2|
+  output = ""
+    if self.downcase().reverse() == word2.downcase()
+      output = "  These words are also palindromes."
+    end
+    output
+  end
+end
+
+class Array
+  define_method(:how_many_letters) do |word2|
+    count = 0
+    self.each do |letter|
+      if word2.include?(letter)
+        count += 1
+        class Array
+          define_method(:how_many_letters) do |word2|
+            self
+          end
+        end
+      end
+    end
+    count
+  end
+end
 
 class String
   define_method(:anagrams) do |word2|
@@ -47,13 +73,15 @@ class String
         variable_output = "antigrams"
         first_letter_array.each do |letter|
           if second_letter_array.include?(letter) == true
-            variable_output = "not anagrams"
+            variable_output = "not anagrams" #'not anagrams' is eroneous here, as we are actually determining if they are antigrams.  If they are not antis, nor anagrams, no mention of antigrams will be made on the final display.
+            count = first_letter_array.how_many_letters(second_letter_array)
+            if count != 0
+              variable_output.concat(" but they have #{count} letter(s) in common")
+            end
           end
         end
       end
-      if self.downcase().reverse() == word2.downcase()
-        palindrome_output = "  These words are also palindromes."
-      end
+      palindrome_output = self.palindromes(word2)
       final_output = "These words are #{variable_output}.#{palindrome_output}"
     else
       final_output = "All inputted must contain a vowel."

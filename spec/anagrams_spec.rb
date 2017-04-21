@@ -47,4 +47,8 @@ describe("String#anagrams") do
   it("Remove spaces before running the anagram check, also ensure that each individual word in the input contains a vowel.") do
   expect("Ruby".anagrams("Seeing h")).to(eq("All inputted must contain a vowel."))
   end
+
+  it("If two words are not anagrams, determine how many letters they have in common.") do
+  expect("Hello you".anagrams("Hello Yue")).to(eq("These words are not anagrams but they have 8 letter(s) in common."))
+  end
 end

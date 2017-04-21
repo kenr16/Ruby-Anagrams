@@ -18,6 +18,7 @@ This website will allow a user to enter a string and check to se if that string 
 |Check to ensure that both inputs are actual words by checking to see if they both contain vowels|"Rby".anagrams("Bury")|"The first word must contain a vowel."|
 |If the words are not anagrams, check to see if they are in fact antigrams.|"Ruby".anagrams("Seeing")|"These words are antigrams."|
 |Remove spaces before comparing anagrams, also check that each individual word in the input string contains a vowel|"Ruby".anagrams("Seeing h")|"All inputted must contain a vowel."|
+|If two words are not anagrams, determine how many letters they have in common|"Hello you".anagrams("Hello Yue")|"These words are not anagrams but they have 8 letter(s) in common."|
 
 ## Installation
 
