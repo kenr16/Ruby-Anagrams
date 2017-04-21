@@ -4,7 +4,7 @@ require('pry')
 
 describe("String#anagrams") do
   it("Checks to see if the words are anagrams of one another.  a-z lowercase only.") do
-  expect("hello".anagrams("hi")).to(eq("These words are not anagrams."))
+  expect("hello".anagrams("hi")).to(eq("These words are not anagrams but they have 1 letter(s) in common."))
   end
 
   it("Checks to see if the words are anagrams of one another.  a-z lowercase only.") do
@@ -13,7 +13,7 @@ describe("String#anagrams") do
 
 
   it("Checks to see if the words are anagrams of one another regardless of case.") do
-  expect("Hello".anagrams("Hi")).to(eq("These words are not anagrams."))
+  expect("Hello".anagrams("Hi")).to(eq("These words are not anagrams but they have 1 letter(s) in common."))
   end
 
   it("Checks to see if the words are anagrams of one another regardless of case.") do
@@ -25,7 +25,7 @@ describe("String#anagrams") do
   end
 
   it("Checks to see if the words are palindromes as well as anagrams regardless of case.") do
-  expect("Ruby".anagrams("Hellu")).to(eq("These words are not anagrams."))
+  expect("Ruby".anagrams("Hellu")).to(eq("These words are not anagrams but they have 1 letter(s) in common."))
   end
 
   it("Checks to see if the inputted words are actual words which contain a vowel.") do
@@ -37,7 +37,7 @@ describe("String#anagrams") do
   end
 
   it("If the words are not anagrams, checks to see if the words are antigrams.") do
-  expect("Ruby".anagrams("Suing")).to(eq("These words are not anagrams."))
+  expect("Ruby".anagrams("Suing")).to(eq("These words are not anagrams but they have 1 letter(s) in common."))
   end
 
   it("If the words are not anagrams, checks to see if the words are antigrams.") do
