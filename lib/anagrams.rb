@@ -16,6 +16,23 @@ class Array
   end
 end
 
+class Array
+  define_method(:how_many_letters) do |word2|
+    count = 0
+    self.each do |letter|
+      if word2.include?(letter)
+        count += 1
+        class Array
+          define_method(:how_many_letters) do |word2|
+            self
+          end
+        end
+      end
+    end
+    count
+  end
+end
+
 class String
   define_method(:verify_words) do |word2|
     output = false
@@ -43,23 +60,6 @@ class String
       output = "  These words are also palindromes."
     end
     output
-  end
-end
-
-class Array
-  define_method(:how_many_letters) do |word2|
-    count = 0
-    self.each do |letter|
-      if word2.include?(letter)
-        count += 1
-        class Array
-          define_method(:how_many_letters) do |word2|
-            self
-          end
-        end
-      end
-    end
-    count
   end
 end
 
@@ -96,7 +96,13 @@ class String
 end
 
 class Anagram
-  define_method(:is_anagram?) do |word1, word2|
-
+  define_method(:initialize) do |word1, word2|
+    @word1 = word1
+    @word2 = word2
+  end
+  define_method(:is_anagram?) do
+    first_letter_array = @word1.downcase().split("")
+    second_letter_array = @word2.downcase().split("")
+    first_letter_array.sort() == second_letter_array.sort()
   end
 end

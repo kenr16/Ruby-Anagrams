@@ -52,3 +52,12 @@ describe("String#anagrams") do
   expect("Hello you".anagrams("Hello Yue")).to(eq("These words are not anagrams but they have 8 letter(s) in common."))
   end
 end
+
+describe(Anagram) do
+  describe('#is_anagram?') do
+    it("Returns false if the inputted pair of words is not an anagram.") do
+      test_pair = Anagram.new("Hello", "Olleh")
+      expect(test_pair.is_anagram?()).to(eq(true))
+    end
+  end
+end
