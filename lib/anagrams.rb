@@ -89,7 +89,7 @@ class String
       palindrome_output = self.palindromes(word2)
       final_output = "These words are #{variable_output}.#{palindrome_output}"
     else
-      final_output = "All inputted must contain a vowel."
+      final_output = "All inputted words must contain a vowel."
     end
     final_output
   end
