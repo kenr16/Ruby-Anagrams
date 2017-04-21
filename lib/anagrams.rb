@@ -94,3 +94,9 @@ class String
     final_output
   end
 end
+
+class Anagram
+  define_method(:is_anagram?) do |word1, word2|
+
+  end
+end
