@@ -13,7 +13,7 @@ This website will allow a user to enter a string and check to se if that string 
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
 |Check to see if two words are anagrams of one another, provided only a-z lowercase input.|"hello".anagrams("hi")|"These words are not anagrams."|
-||||
+|Check to see if two words are anagrams of one another, allowing for different capitalizations.|"Ruby".anagrams("Bury")|"These words are anagrams."|
 
 ## Installation
 
