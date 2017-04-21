@@ -24,9 +24,9 @@ This website will allow a user to enter a string and check to se if that string 
 * In order to run this app:
   - Locate the git repository of this project.
   - Clone or download the git repository onto your desktop.
-  - Locate index.html file.
-  - The html file should be self-executing.
-  - If it is not, open it in the browser of your choice.
+  - Locate home folder of the app "ie:/anagrams/"
+  - Once you have navigated into this folder, run "ruby app.rb"
+  - If should self open into a window in your default browser.
 
 ## Usage
 

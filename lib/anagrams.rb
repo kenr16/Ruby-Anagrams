@@ -34,19 +34,19 @@ end
 
 class String
   define_method(:anagrams) do |word2|
-    first_word_array = self.downcase().split("")
-    second_word_array = word2.downcase().split("")
-    first_word_array.delete(" ")
-    second_word_array.delete(" ")
+    first_letter_array = self.downcase().split("")
+    second_letter_array = word2.downcase().split("")
+    first_letter_array.delete(" ")
+    second_letter_array.delete(" ")
     variable_output = "not anagrams"
     palindrome_output = ""
     if self.verify_words(word2) == true
-      if first_word_array.sort() == second_word_array.sort()
+      if first_letter_array.sort() == second_letter_array.sort()
         variable_output = "anagrams"
       else
         variable_output = "antigrams"
-        first_word_array.each do |letter|
-          if second_word_array.include?(letter) == true
+        first_letter_array.each do |letter|
+          if second_letter_array.include?(letter) == true
             variable_output = "not anagrams"
           end
         end
