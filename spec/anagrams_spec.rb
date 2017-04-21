@@ -28,4 +28,12 @@ describe("String#anagrams") do
   expect("Ruby".anagrams("Hello")).to(eq("These words are not anagrams."))
   end
 
+  it("Checks to see if the inputted words are actual words which contain a vowel.") do
+  expect("Rby".anagrams("Bury")).to(eq("The first word must contain a vowel."))
+  end
+
+  it("Checks to see if the inputted words are actual words which contain a vowel.") do
+  expect("Ruby".anagrams("Bry")).to(eq("The second word must contain a vowel."))
+  end
+
 end

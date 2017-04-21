@@ -15,6 +15,7 @@ This website will allow a user to enter a string and check to se if that string 
 |Check to see if two words are anagrams of one another, provided only a-z lowercase input.|"hello".anagrams("hi")|"These words are not anagrams."|
 |Check to see if two words are anagrams of one another, allowing for different capitalizations.|"Ruby".anagrams("Bury")|"These words are anagrams."|
 |Check to see if two words are also palindromes.|"Hello".anagrams("olleh")|"These words are anagrams.  These words are also palindromes."|
+|Check to ensure that both inputs are actual words by checking to see if they both contain vowels|"Rby".anagrams("Bury")|"The first word must contain a vowel."|
 
 ## Installation
 
