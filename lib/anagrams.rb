@@ -6,6 +6,8 @@ word = "random"
 results = DictionaryLookup::Base.define(word)
 if results.count >= 1
   puts("Success!  The word appears in the dictionary of English words!")
+else
+  puts("This word does not appear in English.")
 end
 
 
