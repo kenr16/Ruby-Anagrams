@@ -20,4 +20,12 @@ describe("String#anagrams") do
   expect("Ruby".anagrams("Bury")).to(eq("These words are anagrams."))
   end
 
+  it("Checks to see if the words are palindromes as well as anagrams regardless of case.") do
+  expect("Hello".anagrams("Olleh")).to(eq("These words are anagrams.  These words are also palindromes."))
+  end
+
+  it("Checks to see if the words are palindromes as well as anagrams regardless of case.") do
+  expect("Ruby".anagrams("Hello")).to(eq("These words are not anagrams."))
+  end
+
 end
