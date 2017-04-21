@@ -16,6 +16,8 @@ class String
   define_method(:anagrams) do |word2|
     first_word_array = self.downcase().split("")
     second_word_array = word2.downcase().split("")
+    first_word_array.delete(" ")
+    second_word_array.delete("")
     variable_output = "not anagrams"
     palindrome_output = ""
     if first_word_array.verify_word() == true && second_word_array.verify_word() == true
