@@ -29,11 +29,11 @@ describe("String#anagrams") do
   end
 
   it("Checks to see if the inputted words are actual words which contain a vowel.") do
-  expect("Rby".anagrams("Bury")).to(eq("The first word must contain a vowel."))
+  expect("Rby".anagrams("Bury")).to(eq("All inputted must contain a vowel."))
   end
 
   it("Checks to see if the inputted words are actual words which contain a vowel.") do
-  expect("Ruby".anagrams("Bry")).to(eq("The second word must contain a vowel."))
+  expect("Ruby".anagrams("Bry")).to(eq("All inputted must contain a vowel."))
   end
 
   it("If the words are not anagrams, checks to see if the words are antigrams.") do
@@ -42,6 +42,10 @@ describe("String#anagrams") do
 
   it("If the words are not anagrams, checks to see if the words are antigrams.") do
   expect("Ruby".anagrams("Seeing")).to(eq("These words are antigrams."))
+  end
+
+  it("Remove spaces before running the anagram check, also ensure that each individual word in the input contains a vowel.") do
+  expect("Ruby".anagrams("Seeing h")).to(eq("All inputted must contain a vowel."))
   end
 
 

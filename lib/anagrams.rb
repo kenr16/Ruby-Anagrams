@@ -11,16 +11,36 @@ class Array
   end
 end
 
+class String
+  define_method(:verify_words) do |word2|
+    output = false
+    first_array_of_words = self.downcase().split(" ")
+    second_array_of_words = word2.downcase().split(" ")
+    output = true
+    first_array_of_words.each do |word|
+      if word.split("").verify_word() == false
+        output = false
+      end
+    end
+    second_array_of_words.each do |word|
+      if word.split("").verify_word() == false
+        output = false
+      end
+    end
+    output
+  end
+end
+
 
 class String
   define_method(:anagrams) do |word2|
     first_word_array = self.downcase().split("")
     second_word_array = word2.downcase().split("")
     first_word_array.delete(" ")
-    second_word_array.delete("")
+    second_word_array.delete(" ")
     variable_output = "not anagrams"
     palindrome_output = ""
-    if first_word_array.verify_word() == true && second_word_array.verify_word() == true
+    if self.verify_words(word2) == true
       if first_word_array.sort() == second_word_array.sort()
         variable_output = "anagrams"
       else
@@ -35,10 +55,8 @@ class String
         palindrome_output = "  These words are also palindromes."
       end
       final_output = "These words are #{variable_output}.#{palindrome_output}"
-    elsif first_word_array.verify_word() == false
-      final_output = "The first word must contain a vowel."
-    elsif second_word_array.verify_word() == false
-      final_output = "The second word must contain a vowel."
+    else
+      final_output = "All inputted must contain a vowel."
     end
     final_output
   end
